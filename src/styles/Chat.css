@@ -1,0 +1,125 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 0.65;
+}
+
+.chat__header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+.chat__headerInfo {
+  flex: 1;
+  padding-left: 20px;
+}
+.chat__headerInfo > h3 {
+  font-weight: 500;
+}
+.chat__headerInfo > p {
+  color: gray;
+  /* padding-left: 5px; */
+}
+.chat__body {
+  flex: 1;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-repeat: repeat;
+  background-position: center;
+  padding: 30px 50px;
+  overflow-y: scroll;
+}
+.chat__message {
+  position: relative;
+  font-size: 18px;
+  padding: 5px 10px;
+  width: fit-content;
+  max-width: 70%;
+  border-radius: 10px;
+  /* border-radius: 10px; */
+  background: #ffffff;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
+  /* grid-template-rows: 5% 90% 5%; */
+}
+.chat__messageSender::after {
+  content: "";
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  background-color: white;
+  left: -10px;
+  top: 0;
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+}
+.chat__MessageText {
+  flex: 0.8;
+}
+.chat__name {
+  flex: 0.1;
+  font-size: xx-small;
+  font-weight: 600;
+  color: #e542a3;
+}
+.chat__nameReceiver {
+  /* position: absolute; */
+  display: none;
+}
+.chat__timestamp {
+  flex: 0.1;
+  font-size: 12px;
+  bottom: 0;
+  text-align: right;
+  right: 10px;
+}
+.chat__receiver {
+  background: #dbf2c4;
+  margin-left: auto;
+}
+.chat__receiver::after {
+  content: "";
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  background-color: #dbf2c4;
+  right: -10px;
+  top: 0;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+.chat__footer {
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  border-top: 1px solid lightgray;
+}
+.chat__footer > form {
+  flex: 1;
+  display: flex;
+}
+.chat__footer > form > input {
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  flex: 1;
+  font-size: 18px;
+}
+.chat__footer > form > button {
+  display: none;
+}
+.chat__footer > .MuiSvgIcon-root {
+  padding: 10px;
+  color: gray;
+}
+.emoji-picker-react {
+  bottom: 110px;
+  width: 50% !important;
+  position: absolute !important;
+}
+.chat_emojipikerVisible {
+  display: none;
+}
